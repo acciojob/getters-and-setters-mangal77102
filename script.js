@@ -1,48 +1,54 @@
-//complete this code
 class Person {
-	constuctor(name,age)
-	{
-		this.name=name;
-		this.age=age;
+	constructor(name, age) {
+		this._name = name;
+		this._age = age;
 	}
-	get name()
-	{
-		return this.name;
-		
+
+	// Getter for name
+	get name() {
+		return this._name;
 	}
-	set age(value)
-	if(value>0)
-	{
-		this.age=value;
+
+	// Setter for name
+	set name(value) {
+		this._name = value;
+	}
+
+	// Getter for age
+	get age() {
+		return this._age;
+	}
+
+	// Setter for age
+	set age(value) {
+		if (value > 0) {
+			this._age = value;
+		}
 	}
 }
 
 class Student extends Person {
-	constuctor(name,age)
-	{
-		super(name,age)
+	constructor(name, age) {
+		super(name, age);
 	}
-	study()
-	{
+
+	study() {
 		console.log(`${this.name} is studying`);
 	}
-	
 }
 
 class Teacher extends Person {
-
-	constuctor(name,age)
-	{
-		super(name,age)
+	constructor(name, age) {
+		super(name, age);
 	}
-	teach()
-	{
+
+	teach() {
 		console.log(`${this.name} is teaching`);
 	}
-	
 }
 
 // Do not change the code below this line
 window.Person = Person;
 window.Student = Student;
 window.Teacher = Teacher;
+
